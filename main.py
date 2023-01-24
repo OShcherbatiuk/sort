@@ -60,9 +60,9 @@ def sort_func(path_dir):
 
 
 if __name__ == "__main__":
-    path_d = input('[+] Введите путь к директории для сортировки: ')
+    path_d = input('[+] Choose path: ')
     if not Path(path_d).exists():
-        print('[-] Директории не существует')
+        print('[-] Not found')
     else:
         sort_func(path_d)
-    print('[!] Сортировка завершена')
+    print('[!] Finish')
