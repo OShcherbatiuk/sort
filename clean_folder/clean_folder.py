@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 from pathlib import Path
 import shutil
 
@@ -64,10 +65,15 @@ def sort_file(path):
         os.rmdir(dir_p)
 
 
-if __name__ == "__main__":
-    path_d = input('[+] Choose path: ')
+def main():
+    path_d = sys.argv[1]
     if not Path(path_d).exists():
         print('[-] Not found')
     else:
         sort_file(path_d)
     print('[!] Finish')
+
+
+if __name__ == "__main__":
+    main()
+
